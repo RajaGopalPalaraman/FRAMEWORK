@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="Blue_ok">Turned On</string>
+    <string name="app_name">LoadControl</string>
+    <string name="close">close</string>
+    <string name="device_error">Device not found</string>
+    <string name="device_list">Paired Devices</string>
+    <string name="disconnected">Bluetooth is Disabled Restart APP</string>
+    <string name="error_on_activation">Not Responding</string>
+    <string name="fail">Failed</string>
+    <string name="l1">Light</string>
+    <string name="l2">Fan</string>
+    <string name="l3">TV</string>
+    <string name="l4">Door</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="onBluetooth">Turn on Bluetooth</string>
+    <string name="on_button">Bluetooth On</string>
+    <string name="open">open</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>
