@@ -55,7 +55,9 @@ public abstract class LinearViewModel implements Model<HashMap<String,HashMap<St
                 Log.d(HelperUtil.LOG_TAG,key);
                 HashMap<String, String> childMap = map.get(key);
                 View view = renderChildMap(childMap);
-                linearLayout.addView(view);
+                if(view != null) {
+                    linearLayout.addView(view);
+                }
             }
         } catch (Exception e)
         {
