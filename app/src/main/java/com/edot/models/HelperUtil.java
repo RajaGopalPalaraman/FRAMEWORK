@@ -1,6 +1,7 @@
 package com.edot.models;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import java.io.InputStream;
@@ -53,7 +54,7 @@ public final class HelperUtil {
         }
     }
 
-    public static Object getStaticFieldFromClass(@NonNull Class targetClass,@NonNull String field)
+    public static Object getFieldFromClass(@NonNull Class targetClass, @Nullable Object classInstance, @NonNull String field)
     {
         Object object = null;
         if(targetClass == null || field == null || field.isEmpty())
@@ -63,7 +64,7 @@ public final class HelperUtil {
         }
         try {
             Field declaredField = targetClass.getField(field);
-            object = declaredField.get(null);
+            object = declaredField.get(classInstance);
         } catch (Exception e) {
             Log.d(LOG_TAG,e.getLocalizedMessage());
             return null;
