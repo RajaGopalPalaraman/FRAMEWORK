@@ -22,7 +22,7 @@ public final class HelperUtil {
             String root = properties.getProperty(field);
             if (root == null || root.isEmpty())
             {
-                Log.d(LOG_TAG,"property '"+ field +"' missing");
+                Log.d(LOG_TAG,"HelperUtil::readProperties: property '"+ field +"' missing");
                 return null;
             }
             String[] values = root.split(",");
