@@ -108,10 +108,6 @@
         "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\9d0ab9cbe17a1f8379ab1e156e3b0ef9\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
@@ -346,6 +342,10 @@
     {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\138e1505776415825ac252d6da7448ca\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_framework_test.xml.flat",
+        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\layout\\activity_framework_test.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -876,10 +876,6 @@
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\9d0ab9cbe17a1f8379ab1e156e3b0ef9\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_paired__devices.xml.flat",
-        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\layout\\activity_paired__devices.xml"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\9d0ab9cbe17a1f8379ab1e156e3b0ef9\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
@@ -944,12 +940,12 @@
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\138e1505776415825ac252d6da7448ca\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_monitor.xml.flat",
-        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\layout\\activity_monitor.xml"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\138e1505776415825ac252d6da7448ca\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\raw_city.properties.flat",
+        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\raw\\city.properties"
     },
     {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1538,10 +1534,6 @@
     {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\raja-7011\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\138e1505776415825ac252d6da7448ca\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\layout_text.xml.flat",
-        "source": "E:\\AndroidProjects\\Framework\\app\\src\\main\\res\\layout\\text.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Framework\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",

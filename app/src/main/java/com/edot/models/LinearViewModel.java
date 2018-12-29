@@ -1,6 +1,7 @@
 package com.edot.models;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -18,9 +19,19 @@ public abstract class LinearViewModel implements Model<HashMap<String,HashMap<St
     private static final String EMPTY_MAP = "Empty Hash Map";
 
     protected Context context;
+    protected LinearLayout linearLayout;
 
     protected LinearViewModel(Context context) {
         this.context = context;
+        linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+    }
+
+    public void setLayoutOrientation(@LinearLayoutCompat.OrientationMode int orientation)
+    {
+        if(orientation == LinearLayout.HORIZONTAL || orientation == LinearLayout.VERTICAL) {
+            linearLayout.setOrientation(orientation);
+        }
     }
 
     @Override
@@ -29,8 +40,6 @@ public abstract class LinearViewModel implements Model<HashMap<String,HashMap<St
     @Override
     public View renderMap(HashMap<String,HashMap<String,String>> map)
     {
-        LinearLayout linearLayout = new LinearLayout(context);
-
         try {
             if (map == null || map.isEmpty()) {
                 Log.d(HelperUtil.LOG_TAG,EMPTY_MAP);
