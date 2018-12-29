@@ -53,7 +53,7 @@ public final class HelperUtil {
         }
     }
 
-    public static Object getFieldFromClass(@NonNull Class targetClass,@NonNull String field)
+    public static Object getStaticFieldFromClass(@NonNull Class targetClass,@NonNull String field)
     {
         Object object = null;
         if(targetClass == null || field == null || field.isEmpty())
