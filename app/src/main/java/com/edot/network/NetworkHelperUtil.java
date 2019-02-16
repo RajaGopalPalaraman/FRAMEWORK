@@ -6,9 +6,13 @@ import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.crypto.Mac;
@@ -88,6 +92,29 @@ public final class NetworkHelperUtil {
         }
 
         return paramsMap;
+    }
+
+    public static String readData(String url, HashMap<String,String> params)
+    {
+        HttpClient httpClient = new HttpPOSTClient();
+        if (httpClient.establishConnection(url,params))
+        {
+            InputStream inputStream = httpClient.getInputStream();
+            byte[] bytes = new byte[500];
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(0);
+            int length;
+            try {
+                while ((length = inputStream.read(bytes)) != -1)
+                {
+                    byteArrayOutputStream.write(bytes,0,length);
+                }
+                return new String(byteArrayOutputStream.toByteArray(), StandardCharsets.UTF_8);
+            } catch (IOException e) {
+                Log.d(LOG_TAG,"Exception while reading data from server : "
+                        +e.getLocalizedMessage());
+            }
+        }
+        return null;
     }
 
 }
