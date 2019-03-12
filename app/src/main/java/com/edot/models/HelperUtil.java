@@ -4,6 +4,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -70,6 +74,43 @@ public final class HelperUtil {
             return null;
         }
         return object;
+    }
+
+    /**
+     *
+     * @param jsonArray
+     * @param keyFieldIndex - keys for the map that should be unique within jsonArray,
+     *                      otherwise DuplicateValueFoundException will be thrown
+     * @param innerKeys - List of
+     * @return - null if jsonArray is null or innerKeys is null or empty,
+     * otherwise HashMap&lt;String,HashMap&lt;String,String&gt;&gt;
+     * @throws JSONException - exception thrown by JSONArray class
+     */
+
+    public static HashMap<String,HashMap<String,String>> jsonToHashMap(JSONArray jsonArray,
+                                                                       int keyFieldIndex,
+                                                                       List<String> innerKeys)
+            throws JSONException {
+        if (jsonArray != null && innerKeys != null && innerKeys.size() > 0)
+        {
+            keyFieldIndex = (keyFieldIndex > -1 && keyFieldIndex < innerKeys.size())? keyFieldIndex : 0;
+            HashMap<String,HashMap<String,String>> mapHashMap = new HashMap<>();
+            int length = jsonArray.length();
+            for (int i=0 ;i<length ;i++)
+            {
+                JSONObject object = jsonArray.getJSONObject(i);
+                HashMap<String,String> innerMap = new HashMap<>();
+                for (String k : innerKeys) {
+                    innerMap.put(k,object.getString(k));
+                }
+                if (mapHashMap.containsKey(object.getString(innerKeys.get(keyFieldIndex)))) {
+                    throw new DuplicateValueFoundException(object.getString(innerKeys.get(keyFieldIndex)));
+                }
+                mapHashMap.put(object.getString(innerKeys.get(keyFieldIndex)), innerMap);
+            }
+            return mapHashMap;
+        }
+        return null;
     }
 
 }
